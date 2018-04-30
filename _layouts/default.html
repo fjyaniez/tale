@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="{{ page.lang }}">
 
   {% include head.html %}
 
@@ -11,7 +11,7 @@
         </a>
         <ul>
           <li><a href="{{ site.baseurl }}/">Inicio</a></li>
-          <li><a href="{{ '/sobre-mi' | prepend: site.baseurl }}">Sobre mi</a></li>
+          <li><a href="{{ '/sobre-mi' | prepend: site.baseurl }}">Sobre mí</a></li>
         </ul>
     </div>
   </nav>
@@ -20,10 +20,7 @@
       {{ content }}
     </main>
 
-    <footer>
-      <span>
-        &copy; <time datetime="{{ site.time }}">{{ site.time | date: '%Y' }}</time> {{ site.author.name }}.
-      </span>
-    </footer>
+    {% include footer.html %}
+
   </body>
 </html>
