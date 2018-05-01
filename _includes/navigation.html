@@ -1,0 +1,21 @@
+<nav class="nav">
+  <div class="nav-container">
+    <a href="{{ site.baseurl }}/">
+      <h2 class="nav-title">{{ site.title }}</h2>
+    </a>
+    <ul>
+      {% for item in site.data.navigation.languages %}
+        {% if item.language == page.lang %}
+          {% for link in item.links %}
+            {% if link.url contains "http" %}
+              {% assign url = link.url %}
+            {% else %}
+              {% assign url = link.url | relative_url %}
+            {% endif %}
+              <li><a href="{{ url }}">{{ link.title }}</a></li>
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</nav>

@@ -2,27 +2,31 @@
 layout: default
 ---
 
+<p class="page-meta">
+  <span class="page-language">{% assign pages=site.pages | where: "ref", page.ref | sort: 'lang_order' %}{% for page in pages %}<a href="{{ page.url }}" class="{{ page.lang }}">{{ page.lang }}</a> {% endfor %}</span>
+</p>
+
 <div class="catalogue">
 
-  {%- if site.posts.size > 0 -%}
-    {%- for post in site.posts -%}
-      <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
-        <div>
-          <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</time>
+  {% capture site_lang %}{{ site.lang | default: "es" }}{% endcapture %}
+  {% assign posts=site.posts | where:"lang", page.lang %}
+
+  {%- for post in posts -%}
+    {% capture lang %}{% if post.lang != site_lang %}{{ post.lang }}{% else %}{{ site_lang }}{% endif %}{% endcapture %}
+    <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
+      <div>
+        <div class="catalogue-header">
           <h1 class="catalogue-title">{{ post.title }}</h1>
-          <div class="catalogue-line"></div>
+          <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</time>
+        </div>
+        <div class="catalogue-line"></div>
 
-          <p>
-            {%- if site.show_excerpts -%}
-              {{ post.excerpt }}
-            {%- endif -%}
-          </p>
+        {{ post.excerpt }}
 
-          </div>
-        </a>
-    {%- endfor -%}
+      </div>
+    </a>
+  {%- endfor -%}
 
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-  {%- endif -%}
+  <p class="rss-subscribe"><a href="{{ "/feed.xml" | relative_url }}">RSS</a></p>
 
 </div>

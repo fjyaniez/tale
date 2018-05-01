@@ -4,17 +4,7 @@
   {% include head.html %}
 
   <body>
-    <nav class="nav">
-      <div class="nav-container">
-        <a href="{{ site.baseurl }}/">
-          <h2 class="nav-title">{{ site.title }}</h2>
-        </a>
-        <ul>
-          <li><a href="{{ site.baseurl }}/">Inicio</a></li>
-          <li><a href="{{ '/sobre-mi' | prepend: site.baseurl }}">Sobre mí</a></li>
-        </ul>
-    </div>
-  </nav>
+    {% include navigation.html %}
 
     <main>
       {{ content }}
