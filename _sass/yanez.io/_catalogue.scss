@@ -1,6 +1,6 @@
 .catalogue {
   .catalogue-title {
-      font-size: 3rem;
+      font-size: 2rem;
       text-align: left;
       margin: 1rem 0;
   }
@@ -12,7 +12,7 @@
   .catalogue-header time {
     float: right;
   }
-    
+
   &-item {
     border-bottom: 1px solid $grey-2;
     color: $default-color;
