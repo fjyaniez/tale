@@ -6,6 +6,8 @@ layout: default
   <span class="page-language">{% assign pages=site.pages | where: "ref", page.ref | sort: 'lang_order' %}{% for page in pages %}<a href="{{ page.url }}" class="{{ page.lang }}">{{ page.lang }}</a> {% endfor %}</span>
 </p>
 
+<h1 class="home-title">{{ page.title }}</h1>
+
 <div class="catalogue">
 
   {% capture site_lang %}{{ site.lang | default: "es" }}{% endcapture %}
