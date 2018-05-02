@@ -2,17 +2,16 @@
 layout: default
 ---
 
+<p class="page-meta">
+  <span class="page-language">
+    {% assign posts=site.posts | where: "ref", page.ref | sort: 'lang_order' %}
+    {% for post in posts %}
+      <a href="{{ post.url }}" class="{{ post.lang }}">{{ post.lang }}</a>
+    {% endfor %}
+  </span>
+</p>
+
 <div class="post">
-  <div class="post-info">
-    <p class="post-meta">
-      <span class="post-language">
-        {% assign posts=site.posts | where: "ref", page.ref | sort: 'lang_order' %}
-        {% for post in posts %}
-          <a href="{{ post.url }}" class="{{ post.lang }}">{{ post.lang }}</a>
-        {% endfor %}
-      </span>
-    </p>
-  </div>
 
   <h1 class="post-title">{{ page.title }}</h1>
   <div class="post-line"></div>

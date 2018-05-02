@@ -1,21 +1,37 @@
 # Site settings
-title:          Tale
-description:    "Minimal Jekyll theme for storytellers"
-url:            "https://chesterhow.github.io"
+defaults:
+- scope:
+    path: "assets/images"
+  values:
+    image: true
 
-# Author
+title: yanez.io theme
+email: hi@yanez.io
+description: "Minimal Jekyll theme for storytellers based on Tale"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://yanez.io" # the base hostname & protocol for your site, e.g. http://example.com
+
+lang: es
+languages: ["es", "en"]
+
 author:
-  name:         Chester How
-  url:          https://chester.how
-  email:        chesterhow@gmail.com
+  name: Francis Yáñez
+  url: https://yanez.io
+  email: hi@yanez.io
 
 # Build settings
-markdown:       kramdown
-
-# Assets
-sass:
-  sass_dir:     _sass
-  style:        compressed
+markdown: kramdown
+theme: yanez.io-theme
+plugins:
+  - jekyll-feed
 
 # Permalinks
-permalink:      /:year-:month-:day/:title
+permalink:      /:categories/:year-:month-:day/:title
+show_excerpts: true
+
+facebook_app_id: facebook_app_id
+facebook_page: https://www.facebook.com/user
+facebook_image: https://example.com/assets/images/yanez.io.png
+twitter_username: twitter_username
+github_username:  github_username
+google_analytics: GACODE
