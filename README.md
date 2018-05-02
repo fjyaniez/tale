@@ -29,7 +29,7 @@ Found a bug or have a suggestion? Feel free to create an issue or make a pull re
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Acknowledgments
 
