@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "yanez.io-theme"
-  spec.version       = "0.1.9"
+  spec.version       = "0.2.0"
   spec.authors       = ["Francis Yáñez"]
   spec.email         = ["hi@yanez.io"]
 
