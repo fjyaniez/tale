@@ -1,0 +1,43 @@
+@media only screen
+  and (min-device-width: 813px) {
+    html {
+      font-size: 1.1em;
+    }
+  }
+
+@media only screen
+  and (max-device-width: 812px) {
+    html {
+      font-size: 1rem !important;
+    }
+
+    .catalogue-title {
+        font-size: 1.25rem !important;
+    }
+
+    blockquote {
+      padding: .5rem 1rem !important;
+    }
+
+    time  {
+      font-size: 0.8rem !important;
+    }
+
+  .post {
+      h1.post-title {
+        font-size: 1.4rem !important;
+      }
+
+      h1 {
+        font-size: 1.4rem !important;
+      }
+
+      h2 {
+        font-size:1.2rem !important;
+      }
+    }
+
+    .catalogue-item {
+      padding: 1rem 0;
+    }
+  }
