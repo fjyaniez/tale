@@ -95,4 +95,9 @@
   <meta name="msapplication-square150x150logo" content="{{ "/assets/mstile-150x150.png" | relative_url }}" />
   <meta name="msapplication-wide310x150logo" content="{{ "/assets/mstile-310x150.png" | relative_url }}" />
   <meta name="msapplication-square310x310logo" content="{{ "/assets/mstile-310x310.png" | relative_url }}" />
+
+  <!-- Analytics -->
+  {% if jekyll.environment == 'production' %}
+    {% include google_analytics.html %}
+  {% endif %}  
 </head>
